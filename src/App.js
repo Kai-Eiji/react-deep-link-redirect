@@ -1,21 +1,27 @@
+import React, {useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const appScheme = "exp://192.168.1.87:19000/--/?name=kai";
+const appName = 'todoList';
+
+function App(props) {
+  useEffect(()=>{
+
+    console.log(window.location.href)
+  },[])
+
+  const isIos = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+  window.location.href = appScheme;
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo" alt="logo"/>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Moving to {appName} {isIos ? 'Iphone' : 'Android'} App
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+        <a className="App-link" href={appScheme}>
+          Click here to move back to the mobile app!!
         </a>
       </header>
     </div>
