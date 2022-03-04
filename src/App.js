@@ -2,12 +2,13 @@ import React, {useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const appScheme = "exp://192.168.1.87:19000/--/signup?manager=Kai Burkholder";
 const appName = 'todoList';
 
 function App(props) {
   const queryParams = new URLSearchParams(window.location.search);
-  console.log(queryParams.get('manager'))
+  console.log(queryParams.get('manager'));
+  const manager = queryParams.get('manager');
+  const appScheme = `exp://192.168.1.87:19000/--/signup?manager=${manager}`;
 
   useEffect(()=>{
     console.log(window.location.href)
