@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const appScheme = "exp://192.168.1.87:19000/--/?name=kai";
+const appScheme = "exp://192.168.1.87:19000/--/signup?company=Test Inc&manager=Kai Burkholder";
 const appName = 'todoList';
 
 function App(props) {
