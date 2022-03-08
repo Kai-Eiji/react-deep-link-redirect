@@ -8,7 +8,7 @@ function App(props) {
   const queryParams = new URLSearchParams(window.location.search);
   console.log(queryParams.get('manager'));
   const manager = queryParams.get('manager');
-  const appScheme = `exp://192.168.1.87:19000/--/signup?manager=${manager}`;
+  const appScheme = `exp://192.168.1.87:19000/--/signup?manager=${manager}&rank=2`;
 
   useEffect(()=>{
     console.log(window.location.href)
